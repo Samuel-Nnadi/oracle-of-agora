@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Oracle of Agora | Agentic Intelligence</title>
+  <meta name="description" content="An autonomous AI agent monitoring the social pulse of the Web3 economy on Arc.network." />
+  <meta property="og:title" content="The Oracle of Agora | Agentic Intelligence" />
+  <meta property="og:description" content="An autonomous AI agent monitoring the social pulse of the Web3 economy on Arc.network." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Oracle of Agora | Agentic Intelligence" />
+  <meta name="twitter:description" content="An autonomous AI agent monitoring the social pulse of the Web3 economy on Arc.network." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◎</text></svg>" />
+</head>
+<body>
+
+  <!-- TICKER -->
+  <div id="ticker-bar" class="ticker-bar">
+    <div class="ticker-track">
+      <div class="ticker-content" id="ticker-content"></div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="#" class="nav-logo">◎ oracle</a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#infra">Infrastructure</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#faq">FAQ</a>
+      <a href="#hero" class="nav-cta">Get early access</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <canvas id="hero-canvas" class="hero-canvas"></canvas>
+    <div class="grain-overlay"></div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-eyebrow">Now listening across the Agora →</p>
+
+        <h1 class="hero-h1">
+          <span class="h1-serif">The Oracle</span>
+          <span class="h1-sans">Sovereign intelligence for the agentic economy</span>
+        </h1>
+
+        <p class="hero-desc">
+          An autonomous agent that monitors thousands of social signals — Discord alpha, X sentiment, 
+          Telegram whispers — then <em>deliberates</em> before executing sub-second trades on Arc.
+        </p>
+
+        <form id="waitlist-form" class="hero-form" autocomplete="off">
+          <div class="input-row">
+            <input type="text" id="waitlist-input" placeholder="your@email.com or name.arc" required />
+            <button type="submit" id="waitlist-btn">Join the deliberation →</button>
+          </div>
+          <p class="form-note"><span id="signup-count">47</span> builders already in the queue</p>
+        </form>
+
+        <div id="success-state" class="success-state" hidden>
+          <p class="success-msg">◎ You're in. The Oracle has noted your presence.<br><span class="success-sub">Watch the Agora for our first signal.</span></p>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="signal-feed">
+          <div class="feed-header">
+            <span class="feed-dot live"></span>
+            <span>live signal feed</span>
+          </div>
+          <div class="feed-body" id="signal-feed">
+            <!-- JS populates -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="how-section">
+    <div class="container">
+      <div class="how-header">
+        <p class="section-eyebrow">The process</p>
+        <h2 class="section-h2">Most bots react. <em>The Oracle deliberates.</em></h2>
+      </div>
+
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Listen</h3>
+            <p>Real-time ingestion across Discord, X, and Telegram. Every signal indexed. Every pulse captured. The Oracle doesn't sample — it absorbs.</p>
+            <div class="step-sources">
+              <span>discord</span>
+              <span>x / twitter</span>
+              <span>telegram</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-connector"></div>
+
+        <div class="process-step step-featured">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Deliberate</h3>
+            <p>Continuous comparative reasoning. Not a script chasing momentum — a thinker separating noise from alpha. Pattern recognition meets philosophical rigor.</p>
+            <div class="step-sources">
+              <span>multi-signal analysis</span>
+              <span>conviction scoring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-connector"></div>
+
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Settle</h3>
+            <p>High-speed execution on Arc.network. From conviction to settlement in under 400ms. USDC and USYC rails. No slippage. No hesitation.</p>
+            <div class="step-sources">
+              <span>arc.network</span>
+              <span>usdc</span>
+              <span>usyc</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFRASTRUCTURE -->
+  <section id="infra" class="infra-section">
+    <div class="container">
+      <div class="infra-grid">
+        <div class="infra-text">
+          <p class="section-eyebrow">Infrastructure</p>
+          <h2 class="section-h2">Built on the rails that matter.</h2>
+          <p class="infra-desc">The Oracle operates at the intersection of three ecosystems — Arc's settlement speed, Circle's compliant stablecoins, and the Agora's builder community.</p>
+        </div>
+
+        <div class="infra-cards">
+          <div class="infra-card">
+            <div class="card-top">
+              <span class="card-label">Settlement layer</span>
+            </div>
+            <h3>Arc.network</h3>
+            <p>Sub-second finality. Infinite horizontal scalability. The backbone of agentic commerce.</p>
+          </div>
+
+          <div class="infra-card">
+            <div class="card-top">
+              <span class="card-label">Currency rails</span>
+            </div>
+            <h3>Circle — USDC / USYC</h3>
+            <p>Trustless, compliant digital currency operations. Yield-bearing settlement with USYC at 4.8% APY.</p>
+          </div>
+
+          <div class="infra-card card-accent">
+            <div class="card-top">
+              <span class="card-label">Origin</span>
+            </div>
+            <h3>The Agora Hackathon</h3>
+            <p>Where sovereign agents are born. Incubated at the frontier of Web3 AI, shipping in public.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-strip">
+        <div class="stat">
+          <span class="stat-val" id="stat-signals">12,847</span>
+          <span class="stat-lbl">signals processed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">&lt;0.4s</span>
+          <span class="stat-lbl">avg settlement</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">24 / 7</span>
+          <span class="stat-lbl">always listening</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">∞</span>
+          <span class="stat-lbl">deliberation cycles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section id="problem" class="problem-section">
+    <div class="container">
+      <div class="problem-grid">
+        <div class="problem-text">
+          <p class="section-eyebrow">The problem</p>
+          <h2 class="section-h2">The Agora is loud. <em>Most agents are deaf.</em></h2>
+        </div>
+        <div class="problem-body">
+          <p>Every day, thousands of signals ripple across Discord servers, Twitter threads, and Telegram groups. Alpha leaks in pod channels. Whale wallets shift. DAO proposals pass quietly. Sentiment flips in minutes.</p>
+          <p>Current trading bots see none of this. They watch price charts. They chase momentum. They execute scripts written weeks ago for markets that no longer exist.</p>
+          <p>The Oracle was built for a different paradigm — one where <em>social context is the alpha</em>, and the agent that listens best, wins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="roadmap-section">
+    <div class="container">
+      <div class="roadmap-header">
+        <p class="section-eyebrow">Roadmap</p>
+        <h2 class="section-h2">What's coming.</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item active">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <span class="tl-phase">Phase 1 — Now</span>
+            <h3>Genesis</h3>
+            <p>Core identity established. Waitlist open. Signal ingestion pipeline live across Discord, X, and Telegram. First deliberation model in training.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <span class="tl-phase">Phase 2 — Q3 2026</span>
+            <h3>First Signal</h3>
+            <p>Public conviction scores published to the Agora. Community-visible reasoning traces. First autonomous test trades on Arc testnet with paper USDC.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <span class="tl-phase">Phase 3 — Q4 2026</span>
+            <h3>Sovereign Operations</h3>
+            <p>Mainnet deployment on Arc.network. Live USDC/USYC settlement. Oracle governance token for deliberation weight. Community signal contributions.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <span class="tl-phase">Phase 4 — 2027</span>
+            <h3>The Collective</h3>
+            <p>Multi-oracle network. Specialized oracles for DeFi, NFTs, and governance. Cross-chain settlement. The Agora becomes the largest social intelligence layer in Web3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM -->
+  <section class="ecosystem-section">
+    <div class="container">
+      <p class="eco-label">Building within the ecosystem</p>
+      <div class="eco-marquee">
+        <div class="eco-track">
+          <span class="eco-item">Arc.network</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Circle</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">USDC</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">USYC</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Canteen</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">The Agora</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Discord</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Telegram</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Arc.network</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Circle</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">USDC</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">USYC</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Canteen</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">The Agora</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Discord</span>
+          <span class="eco-divider">·</span>
+          <span class="eco-item">Telegram</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-left">
+          <p class="section-eyebrow">FAQ</p>
+          <h2 class="section-h2">Common questions.</h2>
+          <p class="faq-subtext">Can't find your answer? <a href="https://discord.gg" target="_blank" class="faq-link">Ask in the Canteen ↗</a></p>
+        </div>
+        <div class="faq-right">
+          <details class="faq-item">
+            <summary>What exactly is The Oracle?</summary>
+            <div class="faq-answer">The Oracle is an autonomous AI agent — a "sovereign citizen" of the Agora. It continuously monitors social signals across Discord, X, and Telegram, uses comparative reasoning to form convictions about market movements, and executes trades on Arc.network using USDC and USYC. It's not a bot following scripts. It thinks.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How is this different from a trading bot?</summary>
+            <div class="faq-answer">Trading bots react to price action — they watch charts and execute pre-written rules. The Oracle listens to the social layer — the alpha that moves markets before the charts reflect it. It deliberates across multiple signal sources before forming a conviction, and only acts when confidence crosses a threshold.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What does joining the waitlist get me?</summary>
+            <div class="faq-answer">Early access to The Oracle's public conviction scores, priority access to the governance token when it launches, and a seat at the deliberation table where the community shapes the Oracle's signal priorities.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What is Arc.network?</summary>
+            <div class="faq-answer">Arc is a high-performance blockchain optimized for agentic commerce — sub-second finality, near-zero fees, and infinite horizontal scalability. It's where The Oracle settles its trades. Think of it as the nervous system for autonomous agents.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is The Oracle live right now?</summary>
+            <div class="faq-answer">The signal ingestion pipeline is live — The Oracle is actively listening across social channels. Autonomous trading is in development and will launch on Arc testnet in Q3 2026 before moving to mainnet. The live signal feed on this page shows real-time processing activity.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <h2 class="cta-h2"><em>The Agora awaits.</em></h2>
+      <p class="cta-p">Be among the first to witness sovereign intelligence in action.</p>
+      <a href="#hero" class="cta-btn" id="cta-join-btn">Get early access ↑</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">◎ oracle</span>
+        <p>Sovereign Intelligence.<br>Sub-second Settlement.</p>
+      </div>
+      <div class="footer-mid">
+        <span class="footer-col-title">Product</span>
+        <a href="#how">How it works</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-right">
+        <span class="footer-col-title">Community</span>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" id="link-twitter">Twitter / X ↗</a>
+        <a href="https://discord.gg" target="_blank" rel="noopener noreferrer" id="link-discord">Canteen Discord ↗</a>
+        <a href="https://arc.network" target="_blank" rel="noopener noreferrer" id="link-arc">Arc Explorer ↗</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 The Oracle of Agora</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
