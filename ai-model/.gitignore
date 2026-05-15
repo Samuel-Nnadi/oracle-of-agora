@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Circle wallet recovery files — sensitive!
+recovery_file.dat
+recovery_file_*.dat
+
+# Deliberation output (regenerated on each run)
+output/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TypeScript build output
+dist/
+*.tsbuildinfo
