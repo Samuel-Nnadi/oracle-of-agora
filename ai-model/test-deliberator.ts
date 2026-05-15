@@ -1,6 +1,15 @@
 import 'dotenv/config';
 import { AgoraOracle } from './src/logic/deliberator.js';
 import * as fs from 'fs';
+import express from 'express';
+
+// --- Hugging Face Health Check ---
+const app = express();
+const port = process.env.PORT || 7860;
+
+app.get('/', (req, res) => res.send('Oracle of Agora is active and listening.'));
+app.listen(port, '0.0.0.0', () => console.log(`\n✅ Health check listening on port ${port}`));
+// ---------------------------------
 
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
